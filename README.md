@@ -1,4 +1,3 @@
-# Cam2Caption
 An Android application which converts camera feed to natural language captions in real time.
 The app uses our customized pre-trained model generated through [image-caption-generator](https://github.com/neural-nuts/image-caption-generator). 
 Using this model the app takes **1-2 second(s)** to caption a live camera frame on Huawei Honor 6x.
