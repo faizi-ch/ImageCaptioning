@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Describe Me"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click on the image to pick a new image:"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:textColor="@android:color/background_light"/>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/captionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:onClick="onPickImage"
+            android:src="@drawable/ic_launcher" />
+    <FrameLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/control_background">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="70dp"
+            android:lineSpacingExtra="8sp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/fab2Layout"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/fab2TextView"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="-30dp"
+            android:background="@drawable/btn_round"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:text="Download"
+            android:visibility="invisible"
+            android:paddingRight="20dp"
+            android:textStyle="bold"
+            android:textColor="#FAFAFA"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fab1Layout"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/fab1TextView"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="-30dp"
+            android:background="@drawable/btn_round"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:text="Speak"
+            android:visibility="invisible"
+            android:paddingRight="20dp"
+            android:textStyle="bold"
+            android:textColor="#FAFAFA"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_toRightOf="@+id/fab1TextView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+</RelativeLayout>
